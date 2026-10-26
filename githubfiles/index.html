@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="theme-color" content="#E9F2F7">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body
+  data-campaign="{{CAMPAIGN}}"
+  data-campaigns="{{CAMPAIGNS}}"
+  data-track-url="/api/track"
+  data-pixel-id="{{PIXEL_ID}}"
+  data-pixel-event="{{PIXEL_EVENT}}">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <main id="main">
+    <section class="wrap hero" aria-labelledby="headline">
+      <svg class="flight" viewBox="0 0 320 160" role="img" aria-label="A paper plane flying along a dotted path">
+        <path class="trail" d="M8 140 C 70 150, 90 40, 150 70 S 240 120, 290 40" fill="none"
+              stroke="#1C6FB5" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 9"/>
+        <g transform="translate(298 36) rotate(-58)">
+          <path d="M0 0 L-34 -13 L-25 0 L-34 13 Z" fill="#1C6FB5"/>
+          <path d="M0 0 L-25 0 L-34 13 Z" fill="#14558C"/>
+          <path d="M-25 0 L-34 13 L-22 6 Z" fill="#F2B84B"/>
+        </g>
+      </svg>
+
+      <h1 id="headline">{{HEADLINE}}</h1>
+      <p class="lede">{{DESCRIPTION}}</p>
+
+      <a class="btn" href="{{TELEGRAM_URL}}" target="_blank" rel="noopener noreferrer" data-join data-button="hero">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M2 21 23 12 2 3v7l15 2-15 2z"/></svg>
+        <span>Join on Telegram</span>
+      </a>
+      <p class="note">Opens Telegram in a new tab. It is free, and you can leave whenever you like.</p>
+    </section>
+
+    <section class="wrap expect" aria-labelledby="expect-h">
+      <h2 id="expect-h">What you get</h2>
+      <ul>
+        <li><strong>Posts in one place.</strong> Every update lands in your Telegram chat list.</li>
+        <li><strong>You choose the noise level.</strong> Mute the channel at any time from Telegram.</li>
+        <li><strong>No sign-up form.</strong> Press Join in Telegram and you are in.</li>
+      </ul>
+    </section>
+
+    <section class="wrap closing" aria-labelledby="closing-h">
+      <h2 id="closing-h">Ready when you are</h2>
+      <a class="btn" href="{{TELEGRAM_URL}}" target="_blank" rel="noopener noreferrer" data-join data-button="footer">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M2 21 23 12 2 3v7l15 2-15 2z"/></svg>
+        <span>Join on Telegram</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>We count clicks on the Join button to measure this page. A click does not mean you joined. To count unique visitors, this page keeps a random ID in your browser; it holds no name, email or phone number.{{PIXEL_NOTICE}}</p>
+  </footer>
+  {{PIXEL_NOSCRIPT}}
+</body>
+</html>

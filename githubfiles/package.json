@@ -1,0 +1,16 @@
+{
+  "name": "telegram-join-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Responsive Telegram join landing page with unique-visitor click tracking (Node.js + SQLite, zero npm dependencies).",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning --env-file-if-exists=.env server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --env-file-if-exists=.env --watch server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js",
+    "gen-secret": "node -p \"require('crypto').randomBytes(32).toString('hex')\""
+  }
+}
